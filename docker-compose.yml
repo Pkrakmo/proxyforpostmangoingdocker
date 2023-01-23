@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    containerizedpp:
+        build: .
+        volumes:
+            - 'F:\DockerTest:/usr/src/app/ProxyForPostman'
+        container_name: containerizedPP
+        restart: always
+        environment:
+            - NODE_VERSION=17.9.1
+            - YARN_VERSION=1.22.19
+        ports:
+            - '3001:3001'
+        image: containerizedpp
